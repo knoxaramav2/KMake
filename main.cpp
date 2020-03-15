@@ -2,12 +2,18 @@
 #include <iostream>
 
 #include "global.hpp"
+#include "crossplatform.hpp"
+#include "Config.hpp"
 
-int main(int argc, char ** argv, char ** argx){
+int main(int argc, char ** argv){
 
-    //Paths::setPaths(argx);
-    Paths::setPaths(0);
-    printf("%d\r\n", argc);
+    Config config;
+
+    //System configuration
+
+    //CLI Options
+
+    //
 
     return 0;
 }

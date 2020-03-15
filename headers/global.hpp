@@ -7,7 +7,7 @@
 namespace Paths{
     extern std::vector <std::string> paths;
     
-    void setPaths(char ** argx);
+    void setPaths();
     int size();
     std::string getAt(int idx);
 };

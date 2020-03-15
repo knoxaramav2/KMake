@@ -1,17 +1,19 @@
 #include <stdio.h>
+#include <cstdlib>
 
 #include "global.hpp"
+#include "crossplatform.hpp"
 
 using namespace std;
-using namespace Paths;
 
-//vector <string> paths;
+namespace Paths{
 
-void setPaths(char ** argx){
-    for (auto i=0; i < 50; ++i){
-        printf("%s\r\n", argx[i]);
-        fflush(stdout);
-    }
+vector <string> paths;
+
+void setPaths(){
+    const char * env_path = std::getenv("PATH");
+    if (env_path==nullptr) return;
+
 }
 
 int size(){
@@ -24,4 +26,6 @@ string getAt(int idx){
     }
 
     return nullptr;
+}
+
 }
