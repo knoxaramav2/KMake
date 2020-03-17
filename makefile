@@ -34,7 +34,7 @@ all: $(RUNPATH)
 	echo $(OUT) Done.
 
 .cpp.o:
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) $(PLATFORM) -c -o $@ $<
 
 $(RUNPATH) : $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $(OBJ)

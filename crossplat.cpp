@@ -4,20 +4,26 @@
 
 using namespace std;
 
+string Newline;
 
 vector <string> getEnvVar(){
     
     vector <string> paths;
     
-    const char * envPath = std::getenv("PATH");
+    //const char * envPath = std::getenv("PATH");
     
-    int8_t a =3;
-    uint8_t b = 4;
-
-    if (a<b){
-        return paths;
-    }
 
 
     return paths;
+}
+
+void InitializeCrossPlatform(){
+    #if defined(__WINDOWS)
+        Newline = "\r\n";
+    #elif defined(__LINUX)
+        Newline = "\n";
+    #else
+        int a; 
+    #endif
+
 }

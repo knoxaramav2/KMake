@@ -9,7 +9,10 @@
 #include <string>
 #include <vector>
 
+extern std::string Newline;
+
 std::vector<std::string> getEnvVar();
 
+void InitializeCrossPlatform();
 
 #endif
